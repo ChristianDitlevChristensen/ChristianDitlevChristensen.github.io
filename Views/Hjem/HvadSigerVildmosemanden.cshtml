@@ -1,0 +1,222 @@
+﻿<html>
+<head>
+    <title>Hvad siger Vildmosemanden?</title>
+    <style>
+        .tab {
+            width: 400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .tab-button {
+            padding: 10px;
+            background-color: #f2f2f2;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+        }
+
+        .tab-content {
+            margin-top: 10px;
+        }
+
+            .tab-content div {
+                display: none;
+            }
+
+                .tab-content div img {
+                    max-width: 100%;
+                    height: auto;
+                }
+
+                .tab-content div p {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    color: white;
+                    font-size: 24px;
+                    font-weight: bold;
+                    text-align: center;
+                    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+                }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <button class="tab-button" onclick="randomizeTab()">Hvad siger Vildmosemanden?</button>
+        <div class="tab-content">
+            <div id="content1" style="display: none;">
+                <img src="/images/Ja.jpg" alt="Billede 1">
+                <p>Vildmosemanden siger JA! Og det gør Vildmosekonen også!</p>
+            </div>
+            <div id="content2" style="display: none;">
+                <img src="/images/Nej.jpg" alt="Billede 2">
+                <p>Vildmosemanden siger NEJ!</p>
+            </div>
+            <div id="content3" style="display: none;">
+                <img src="/images/Kaffe.jpg" alt="Billede 2">
+                <p>Vildmosemanden drikker kaffe lige nu!</p>
+            </div>
+            <div id="content4" style="display: none;">
+                <img src="/images/TagerBilleder.jpg" alt="Billede 2">
+                <p>Vildmosemanden tager billeder lige nu!</p>
+            </div>
+            <div id="content5" style="display: none;">
+                <img src="/images/Vildmosekone.jpg" alt="Billede 2">
+                <p>Spørg Vildmosekonen!</p>
+            </div>
+            <div id="content6" style="display: none;">
+                <img src="/images/IkkeStilling.jpg" alt="Billede 2">
+                <p>Det gider Vildmosemanden ikke tage stilling til lige nu!</p>
+            </div>
+            <div id="content7" style="display: none;">
+                <img src="/images/Camping.jpg" alt="Billede 2">
+                <p>Vildmosemanden er på camping lige nu!</p>
+            </div>
+            <div id="content8" style="display: none;">
+                <img src="/images/Spise.jpg" alt="Billede 2">
+                <p>Vildmosemanden har travlt med at spise lige nu!</p>
+            </div>
+            <div id="content9" style="display: none;">
+                <img src="/images/Kop.jpg" alt="Billede 2">
+                <p>Svaret ligger i bunden af koppen!</p>
+            </div>
+            <div id="content10" style="display: none;">
+                <img src="/images/TagBillede.jpg" alt="Billede 2">
+                <p>Vildmosemanden siger, han først skal tage et billede!</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function randomizeTab() {
+            var content1 = document.getElementById("content1");
+            var content2 = document.getElementById("content2");
+
+            var random = Math.floor(Math.random() * 10);
+
+            if (random == 0) {
+                content1.style.display = "block";
+                content2.style.display = "none";
+                content3.style.display = "none";
+                content4.style.display = "none";
+                content5.style.display = "none";
+                content6.style.display = "none";
+                content7.style.display = "none";
+                content8.style.display = "none";
+                content9.style.display = "none";
+                content10.style.display = "none";
+            }
+            else if (random == 1) {
+                content1.style.display = "none";
+                content2.style.display = "block";
+                content3.style.display = "none";
+                content4.style.display = "none";
+                content5.style.display = "none";
+                content6.style.display = "none";
+                content7.style.display = "none";
+                content8.style.display = "none";
+                content9.style.display = "none";
+                content10.style.display = "none";
+            }
+            else if (random == 2) {
+                content1.style.display = "none";
+                content2.style.display = "none";
+                content3.style.display = "block";
+                content4.style.display = "none";
+                content5.style.display = "none";
+                content6.style.display = "none";
+                content7.style.display = "none";
+                content8.style.display = "none";
+                content9.style.display = "none";
+                content10.style.display = "none";
+            }
+            else if (random == 3) {
+                content1.style.display = "none";
+                content2.style.display = "none";
+                content3.style.display = "none";
+                content4.style.display = "block";
+                content5.style.display = "none";
+                content6.style.display = "none";
+                content7.style.display = "none";
+                content8.style.display = "none";
+                content9.style.display = "none";
+                content10.style.display = "none";
+            }
+            else if (random == 4) {
+                content1.style.display = "none";
+                content2.style.display = "none";
+                content3.style.display = "none";
+                content4.style.display = "none";
+                content5.style.display = "block";
+                content6.style.display = "none";
+                content7.style.display = "none";
+                content8.style.display = "none";
+                content9.style.display = "none";
+                content10.style.display = "none";
+            }
+            else if (random == 5) {
+                content1.style.display = "none";
+                content2.style.display = "none";
+                content3.style.display = "none";
+                content4.style.display = "none";
+                content5.style.display = "none";
+                content6.style.display = "block";
+                content7.style.display = "none";
+                content8.style.display = "none";
+                content9.style.display = "none";
+                content10.style.display = "none";
+            }
+            else if (random == 6) {
+                content1.style.display = "none";
+                content2.style.display = "none";
+                content3.style.display = "none";
+                content4.style.display = "none";
+                content5.style.display = "none";
+                content6.style.display = "none";
+                content7.style.display = "block";
+                content8.style.display = "none";
+                content9.style.display = "none";
+                content10.style.display = "none";
+            }
+            else if (random == 7) {
+                content1.style.display = "none";
+                content2.style.display = "none";
+                content3.style.display = "none";
+                content4.style.display = "none";
+                content5.style.display = "none";
+                content6.style.display = "none";
+                content7.style.display = "none";
+                content8.style.display = "block";
+                content9.style.display = "none";
+                content10.style.display = "none";
+            }
+            else if (random == 8) {
+                content1.style.display = "none";
+                content2.style.display = "none";
+                content3.style.display = "none";
+                content4.style.display = "none";
+                content5.style.display = "none";
+                content6.style.display = "none";
+                content7.style.display = "none";
+                content8.style.display = "none";
+                content9.style.display = "block";
+                content10.style.display = "none";
+            }
+            else {
+                content1.style.display = "none";
+                content2.style.display = "none";
+                content3.style.display = "none";
+                content4.style.display = "none";
+                content5.style.display = "none";
+                content6.style.display = "none";
+                content7.style.display = "none";
+                content8.style.display = "none";
+                content9.style.display = "none";
+                content10.style.display = "block";
+            }
+        }
+    </script>
+</body>
+</html>
